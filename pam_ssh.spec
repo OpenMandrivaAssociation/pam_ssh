@@ -12,7 +12,6 @@ BuildRequires:	pam-devel
 BuildRequires:  openssl-devel
 BuildRequires:  openssh-clients
 BuildRequires:	autoconf2.5
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 
 %description
