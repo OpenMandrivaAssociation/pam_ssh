@@ -1,9 +1,8 @@
 Name:		pam_ssh
-Version:	1.91
-Release:	%mkrel 5
+Version:	1.97
+Release:	%mkrel 1
 Summary:	A Pluggable Authentication Module (PAM) for use with SSH
-Source0:	http://belnet.dl.sourceforge.net/sourceforge/%{name}/%{name}-%{version}.tar.bz2
-Patch0:		pam_ssh-1.91-fix-missing-headers.patch.bz2
+Source0:	http://downloads.sourceforge.net/project/%{name}/%{name}/%{version}/%{name}-%{version}.tar.bz2
 URL:		http://sourceforge.net/projects/pam-ssh/
 License:	BSD
 Group:		System/Libraries
@@ -23,18 +22,17 @@ started and keys are added.
 
 %prep
 %setup -q
-%patch0 -p1 -b .fix_headers
 
 %build
 %configure2_5x --with-pam-dir=/%_lib/security
 %make
 
 %install
-rm -rf $RPM_BUILD_ROOT
+rm -rf %{buildroot}
 %makeinstall_std
 
 %clean
-rm -rf $RPM_BUILD_ROOT
+rm -rf %{buildroot}
 
 %files
 %defattr(-,root,root)
