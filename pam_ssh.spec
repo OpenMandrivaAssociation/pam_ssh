@@ -1,6 +1,6 @@
 Name:		pam_ssh
 Version:	1.97
-Release:	%mkrel 1
+Release:	%mkrel 2
 Summary:	A Pluggable Authentication Module (PAM) for use with SSH
 Source0:	http://downloads.sourceforge.net/project/%{name}/%{name}/%{version}/%{name}-%{version}.tar.bz2
 URL:		http://sourceforge.net/projects/pam-ssh/
@@ -10,7 +10,7 @@ Requires:	openssh
 BuildRequires:	pam-devel 
 BuildRequires:  openssl-devel
 BuildRequires:  openssh-clients
-BuildRequires:	autoconf2.5
+BuildRequires:	autoconf
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 
@@ -24,6 +24,7 @@ started and keys are added.
 %setup -q
 
 %build
+autoreconf -fi
 %configure2_5x --with-pam-dir=/%_lib/security
 %make
 
