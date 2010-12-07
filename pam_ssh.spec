@@ -1,6 +1,6 @@
 Name:		pam_ssh
 Version:	1.97
-Release:	%mkrel 2
+Release:	%mkrel 3
 Summary:	A Pluggable Authentication Module (PAM) for use with SSH
 Source0:	http://downloads.sourceforge.net/project/%{name}/%{name}/%{version}/%{name}-%{version}.tar.bz2
 URL:		http://sourceforge.net/projects/pam-ssh/
