@@ -3,7 +3,7 @@ Version:	1.97
 Release:	4
 Summary:	A Pluggable Authentication Module (PAM) for use with SSH
 Source0:	http://downloads.sourceforge.net/project/%{name}/%{name}/%{version}/%{name}-%{version}.tar.bz2
-URL:		http://sourceforge.net/projects/pam-ssh/
+URL:		https://sourceforge.net/projects/pam-ssh/
 License:	BSD
 Group:		System/Libraries
 Requires:	openssh
